@@ -16,7 +16,7 @@
 }
 
 body {
-  background: url(/public/BG/Clouds.jpg) center center/cover no-repeat;
+  background: url(./assets/Images/Clouds.jpg) center center/cover no-repeat;
   height: 100vh;
   backdrop-filter: brightness(0.5);
 }
