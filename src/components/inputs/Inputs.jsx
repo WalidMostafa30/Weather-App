@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
 import "./Inputs.css";
 import { useState } from "react";
-import srchIcon from "../../assets/Images/Search-Icon.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 const Inputs = ({ getData }) => {
   const [input, setInput] = useState("");
@@ -14,7 +15,6 @@ const Inputs = ({ getData }) => {
     e.preventDefault();
     if (input.trim().length > 0) {
       getData(input);
-      // setInput("");
     }
   };
 
@@ -27,7 +27,7 @@ const Inputs = ({ getData }) => {
         value={input}
       />
       <button className="form__btn">
-        <img src={srchIcon} />
+        <FontAwesomeIcon icon={faSearch} />
       </button>
     </form>
   );

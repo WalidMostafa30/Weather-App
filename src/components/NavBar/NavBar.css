@@ -2,13 +2,8 @@
   background: rgba(225, 255, 255, 0.1);
   backdrop-filter: blur(30px);
   box-shadow: var(--main-shadow);
-  width: 100%;
-  z-index: 1000;
-  position: sticky;
-  top: 0;
-  left: 0;
   text-align: center;
-  padding: 15px;
+  padding: 10px;
   font-size: 30px;
   font-weight: bold;
 

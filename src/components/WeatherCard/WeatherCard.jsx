@@ -1,14 +1,14 @@
 /* eslint-disable react/prop-types */
 import "./WeatherCard.css";
-import humimg from "../../assets/Images/humidity.svg";
-import windimg from "../../assets/Images/wind.svg";
-import Clouds from "../../assets/Images/icons/Clouds.png";
-import Clear from "../../assets/Images/icons/Clear.png";
-import Drizzle from "../../assets/Images/icons/Drizzle.png";
-import Fog from "../../assets/Images/icons/Fog.png";
-import Rain from "../../assets/Images/icons/Rain.png";
-import Snow from "../../assets/Images/icons/Snow.png";
-import Windy from "../../assets/Images/icons/Windy.png";
+import Clouds from "../../assets/Images/icons/Clouds.webp";
+import Clear from "../../assets/Images/icons/Clear.webp";
+import Drizzle from "../../assets/Images/icons/Drizzle.webp";
+import Fog from "../../assets/Images/icons/Fog.webp";
+import Rain from "../../assets/Images/icons/Rain.webp";
+import Snow from "../../assets/Images/icons/Snow.webp";
+import Windy from "../../assets/Images/icons/Windy.webp";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWater, faWind } from "@fortawesome/free-solid-svg-icons";
 
 const WeatherCard = ({ data }) => {
   let img;
@@ -42,7 +42,7 @@ const WeatherCard = ({ data }) => {
 
       <div className="WeatherCard__infos">
         <div className="WeatherCard__info">
-          <img src={humimg} />
+          <FontAwesomeIcon icon={faWater}/>
           <div className="WeatherCard__info-content">
             <h2>{data.data.main.humidity} %</h2>
             <p>Humidity</p>
@@ -50,7 +50,7 @@ const WeatherCard = ({ data }) => {
         </div>
 
         <div className="WeatherCard__info">
-          <img src={windimg} />
+          <FontAwesomeIcon icon={faWind}/>
           <div className="WeatherCard__info-content">
             <h2>{data.data.wind.speed} km/h</h2>
             <p>Wind Speed</p>
