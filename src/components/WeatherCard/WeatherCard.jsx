@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
 import "./WeatherCard.css";
-import Clouds from "../../assets/Images/icons/Clouds.webp";
-import Clear from "../../assets/Images/icons/Clear.webp";
-import Drizzle from "../../assets/Images/icons/Drizzle.webp";
-import Fog from "../../assets/Images/icons/Fog.webp";
-import Rain from "../../assets/Images/icons/Rain.webp";
-import Snow from "../../assets/Images/icons/Snow.webp";
-import Windy from "../../assets/Images/icons/Windy.webp";
+import Clouds from "../../assets/Images/Clouds.webp";
+import Clear from "../../assets/Images/Clear.webp";
+import Drizzle from "../../assets/Images/Drizzle.webp";
+import Fog from "../../assets/Images/Fog.webp";
+import Rain from "../../assets/Images/Rain.webp";
+import Snow from "../../assets/Images/Snow.webp";
+import Windy from "../../assets/Images/Windy.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWater, faWind } from "@fortawesome/free-solid-svg-icons";
 
@@ -30,33 +30,35 @@ const WeatherCard = ({ data }) => {
 
   return (
     <div className="WeatherCard">
-      <h1 className="WeatherCard__title">{data.data.name}</h1>
-      <img className="WeatherCard__img" src={img} alt="img" />
+      <>
+        <h1 className="WeatherCard__title">{data.data.name}</h1>
+        <img className="WeatherCard__img" src={img} alt="img" />
 
-      <div className="WeatherCard__temp">
-        <h1>
-          {Math.round(data.data.main.temp)} <span>°C</span>
-        </h1>
-        <p>{data.data.weather[0].main}</p>
-      </div>
-
-      <div className="WeatherCard__infos">
-        <div className="WeatherCard__info">
-          <FontAwesomeIcon icon={faWater}/>
-          <div className="WeatherCard__info-content">
-            <h2>{data.data.main.humidity} %</h2>
-            <p>Humidity</p>
-          </div>
+        <div className="WeatherCard__temp">
+          <h1>
+            {Math.round(data.data.main.temp)} <span>°C</span>
+          </h1>
+          <p>{data.data.weather[0].main}</p>
         </div>
 
-        <div className="WeatherCard__info">
-          <FontAwesomeIcon icon={faWind}/>
-          <div className="WeatherCard__info-content">
-            <h2>{data.data.wind.speed} km/h</h2>
-            <p>Wind Speed</p>
+        <div className="WeatherCard__infos">
+          <div className="WeatherCard__info">
+            <FontAwesomeIcon icon={faWater} />
+            <div className="WeatherCard__info-content">
+              <h2>{data.data.main.humidity} %</h2>
+              <p>Humidity</p>
+            </div>
+          </div>
+
+          <div className="WeatherCard__info">
+            <FontAwesomeIcon icon={faWind} />
+            <div className="WeatherCard__info-content">
+              <h2>{data.data.wind.speed} km/h</h2>
+              <p>Wind Speed</p>
+            </div>
           </div>
         </div>
-      </div>
+      </>
     </div>
   );
 };

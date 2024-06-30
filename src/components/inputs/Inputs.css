@@ -1,31 +1,22 @@
 .form {
-  background: rgba(225, 255, 255, 0.1);
-  backdrop-filter: blur(30px);
+  background-color: #eee;
   box-shadow: var(--main-shadow);
   border-radius: 50px;
   display: flex;
   align-items: center;
   gap: 5px;
   width: var(--main-width);
-  padding: 5px;
+  padding:10px 5px;
   margin: 30px auto;
 
   .form__input {
     border-radius: 50px;
     background-color: transparent;
     flex-grow: 1;
-    font-size: 22px;
+    font-size: 20px;
     padding: 0 10px;
     outline: none;
     border: none;
-
-    &::placeholder{
-      color: white;
-    }
-
-    @media (max-width: 991px) {
-      font-size: 20px;
-    }
   }
 
   .form__btn {
@@ -36,6 +27,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+cursor: pointer;
 
     &:hover {
       filter: contrast(0.5);

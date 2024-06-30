@@ -1,6 +1,5 @@
 .NavBar {
-  background: rgba(225, 255, 255, 0.1);
-  backdrop-filter: blur(30px);
+  background-color: #eee;
   box-shadow: var(--main-shadow);
   text-align: center;
   padding: 10px;

@@ -3,11 +3,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: white;
+  color: black;
 }
 
 :root {
-  --main-shadow: 0px 0px 8px -2px white;
+  --main-shadow: 0px 0px 8px -2px black;
   --main-width: 500px;
 
   @media (max-width: 768px) {
@@ -16,8 +16,5 @@
 }
 
 body {
-  /* background: url(./assets/Images/Clouds.jpg) center center/cover no-repeat; */
-  background: linear-gradient(black, #53b0bc);
-  height: 100vh;
-  backdrop-filter: brightness(0.5);
+  background-color: white;
 }
