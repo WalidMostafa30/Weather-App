@@ -1,13 +1,10 @@
 .form {
-  background-color: #eee;
-  box-shadow: var(--main-shadow);
+  border: var(--main-border);
   border-radius: 50px;
   display: flex;
   align-items: center;
   gap: 5px;
-  width: var(--main-width);
-  padding:10px 5px;
-  margin: 30px auto;
+  padding: 10px 5px;
 
   .form__input {
     border-radius: 50px;
@@ -17,6 +14,10 @@
     padding: 0 10px;
     outline: none;
     border: none;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.69);
+    }
   }
 
   .form__btn {
@@ -27,7 +28,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-cursor: pointer;
+    cursor: pointer;
 
     &:hover {
       filter: contrast(0.5);

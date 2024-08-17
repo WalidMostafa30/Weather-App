@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch } from "react-redux";
-import { getWeather } from "../../rtk/weatherSlice";
+import { getWeather } from "../../store/weatherSlice";
 
 const Inputs = () => {
   const [input, setInput] = useState("");
@@ -11,8 +11,7 @@ const Inputs = () => {
   const inputRef = useRef(null);
 
   useEffect(() => {
-    
-  inputRef.current.focus()
+    inputRef.current.focus();
   }, []);
 
   const onChangeHandler = (e) => {

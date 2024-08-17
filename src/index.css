@@ -3,18 +3,14 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: black;
+  color: white;
 }
 
 :root {
-  --main-shadow: 0px 0px 8px -2px black;
-  --main-width: 500px;
-
-  @media (max-width: 768px) {
-    --main-width: 95%;
-  }
+  --main-border: 2px solid rgba(255, 255, 255, 0.2);
+  --main-bg-color: rgba(255, 255, 255, 0.1);
 }
 
 body {
-  background-color: white;
+  background-color: #24192e;
 }

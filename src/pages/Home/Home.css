@@ -1,11 +1,15 @@
 .Home {
-  .weather-msg {
-    background-color: #eee;
-    border-radius: 25px;
-    box-shadow: var(--main-shadow);
-    width: var(--main-width);
-    text-align: center;
-    margin: auto;
-    padding: 10px 0;
+  background-color: var(--main-bg-color);
+  backdrop-filter: blur(30px);
+  border-radius: 50px;
+  border: var(--main-border);
+  width: var(--main-width);
+  text-align: center;
+  margin: 30px auto;
+  padding: 20px;
+  width: 500px;
+
+  @media (max-width: 992px) {
+    width: 95%;
   }
 }
