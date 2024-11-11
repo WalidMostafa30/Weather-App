@@ -27,7 +27,7 @@ const Inputs = () => {
         onChange={onChangeHandler}
         value={input}
       />
-      <button className="Form__btn">
+      <button className="Form__btn" aria-label="Search for weather">
         <SearchIcon />
       </button>
     </form>
