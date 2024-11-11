@@ -1,14 +1,12 @@
 /* eslint-disable react/prop-types */
+import ErrorIcon from "../../assets/icons/ErrorIcon";
+import LocationIcon from "../../assets/icons/LocationIcon";
 import "./Error.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationDot, faTriangleExclamation } from "@fortawesome/free-solid-svg-icons";
 
 const Error = ({ error }) => {
   return (
     <div className="Error">
-      <FontAwesomeIcon
-        icon={error === "Enter valid location" ? faLocationDot : faTriangleExclamation}
-      />
+      {error === "Enter valid location" ? <LocationIcon /> : <ErrorIcon />}
 
       <h1 className="Error__text">{error}</h1>
     </div>

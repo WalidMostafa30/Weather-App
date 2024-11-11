@@ -6,18 +6,20 @@ import Loading from "../../components/Loading/Loading";
 import Error from "../../components/Error/Error";
 
 const Home = () => {
-  const { weather, isLoading, error } = useSelector((state) => state.weather);
+  const { weather, loading, error } = useSelector((state) => state.weather);
 
   return (
     <section className="Home">
-      <Inputs />
-      {isLoading ? (
-        <Loading />
-      ) : error ? (
-        <Error error={error} />
-      ) : (
-        weather && <WeatherCard data={weather} />
-      )}
+      <div className="Home__container">
+        <Inputs />
+        {loading ? (
+          <Loading />
+        ) : error ? (
+          <Error error={error} />
+        ) : (
+          weather && <WeatherCard data={weather} />
+        )}
+      </div>
     </section>
   );
 };

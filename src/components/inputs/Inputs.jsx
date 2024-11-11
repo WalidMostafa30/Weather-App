@@ -1,18 +1,12 @@
-import "./Inputs.css";
-import { useEffect, useRef, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getWeather } from "../../store/weatherSlice";
+import "./Inputs.css";
+import SearchIcon from "../../assets/icons/SearchIcon";
 
 const Inputs = () => {
   const [input, setInput] = useState("");
   const dispatch = useDispatch();
-  const inputRef = useRef(null);
-
-  useEffect(() => {
-    inputRef.current.focus();
-  }, []);
 
   const onChangeHandler = (e) => {
     setInput(e.target.value);
@@ -26,16 +20,15 @@ const Inputs = () => {
   };
 
   return (
-    <form className="form" onSubmit={onSubmitHandler}>
+    <form className="Form" onSubmit={onSubmitHandler}>
       <input
-        ref={inputRef}
-        className="form__input"
+        className="Form__input"
         placeholder="Enter Your Location.."
         onChange={onChangeHandler}
         value={input}
       />
-      <button className="form__btn">
-        <FontAwesomeIcon icon={faSearch} />
+      <button className="Form__btn">
+        <SearchIcon />
       </button>
     </form>
   );

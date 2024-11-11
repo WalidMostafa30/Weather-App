@@ -1,9 +1,0 @@
-.NavBar {
-  background-color: var(--main-bg-color);
-  backdrop-filter: blur(30px);
-  border: var(--main-border);
-  text-align: center;
-  padding: 10px;
-  border-end-end-radius: 45px;
-  border-end-start-radius: 45px;
-}

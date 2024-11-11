@@ -2,15 +2,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: white;
 }
 
 :root {
   --main-border: 2px solid rgba(255, 255, 255, 0.2);
-  --main-bg-color: rgba(255, 255, 255, 0.1);
+  --main-bg: rgba(255, 255, 255, 0.1);
+  --main-blur: blur(70px);
 }
 
 body {
-  background-color: #24192e;
+  font-family: sans-serif;
+  color: white;
+  height: 100dvh;
+  background-color: #133b6b;
+  background: url("/src/assets/Images/bigBg.webp") center center / cover
+    no-repeat;
 }

@@ -1,41 +1,38 @@
-.form {
+.Form {
   border: var(--main-border);
-  border-radius: 50px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
-  gap: 5px;
   padding: 10px 5px;
 
-  .form__input {
-    border-radius: 50px;
+  .Form__input {
+    color: inherit;
     background-color: transparent;
-    flex-grow: 1;
+    width: 100%;
     font-size: 20px;
-    padding: 0 10px;
+    padding: 5px;
     outline: none;
     border: none;
+    border-right: var(--main-border);
 
     &::placeholder {
       color: rgba(255, 255, 255, 0.69);
     }
   }
 
-  .form__btn {
+  .Form__btn {
     background-color: transparent;
-    width: 50px;
     font-size: 30px;
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: inherit;
     cursor: pointer;
+    padding-left: 5px;
 
     &:hover {
       filter: contrast(0.5);
-    }
-
-    @media (max-width: 991px) {
-      width: 40px;
     }
   }
 }
